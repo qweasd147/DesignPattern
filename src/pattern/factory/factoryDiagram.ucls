@@ -3,7 +3,7 @@
   associations="true" dependencies="false" nesting-relationships="true" router="FAN">  
   <class id="1" language="java" name="pattern.factory.impl.HpPotion" project="DesignPattern" 
     file="/DesignPattern/src/pattern/factory/impl/HpPotion.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="92" y="347"/>    
+    <position height="-1" width="-1" x="116" y="318"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
@@ -12,7 +12,7 @@
   </class>  
   <class id="2" language="java" name="pattern.factory.Main" project="DesignPattern" 
     file="/DesignPattern/src/pattern/factory/Main.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="215" y="553"/>    
+    <position height="-1" width="-1" x="335" y="514"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
@@ -21,7 +21,7 @@
   </class>  
   <class id="3" language="java" name="pattern.factory.impl.HpCreator" project="DesignPattern" 
     file="/DesignPattern/src/pattern/factory/impl/HpCreator.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="386" y="218"/>    
+    <position height="-1" width="-1" x="489" y="332"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
@@ -30,55 +30,55 @@
   </class>  
   <class id="4" language="java" name="pattern.factory.impl.MpCreator" project="DesignPattern" 
     file="/DesignPattern/src/pattern/factory/impl/MpCreator.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="566" y="439"/>    
+    <position height="-1" width="-1" x="673" y="337"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <class id="5" language="java" name="pattern.factory.lib.ItemCreator" project="DesignPattern" 
-    file="/DesignPattern/src/pattern/factory/lib/ItemCreator.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="567" y="216"/>    
-    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
-      sort-features="false" accessors="true" visibility="true">      
-      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
-      <operations public="true" package="true" protected="true" private="true" static="true"/>    
-    </display>  
-  </class>  
-  <class id="6" language="java" name="pattern.factory.impl.MpPotion" project="DesignPattern" 
-    file="/DesignPattern/src/pattern/factory/impl/MpPotion.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="237" y="348"/>    
-    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
-      sort-features="false" accessors="true" visibility="true">      
-      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
-      <operations public="true" package="true" protected="true" private="true" static="true"/>    
-    </display>  
-  </class>  
-  <interface id="7" language="java" name="pattern.factory.lib.Item" project="DesignPattern" 
-    file="/DesignPattern/src/pattern/factory/lib/Item.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="165" y="174"/>    
+  <interface id="5" language="java" name="pattern.factory.lib.Product" project="DesignPattern" 
+    file="/DesignPattern/src/pattern/factory/lib/Product.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="225" y="181"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </interface>  
-  <realization id="8">    
-    <end type="SOURCE" refId="6"/>    
-    <end type="TARGET" refId="7"/>  
-  </realization>  
-  <generalization id="9">    
-    <end type="SOURCE" refId="3"/>    
-    <end type="TARGET" refId="5"/>  
+  <class id="6" language="java" name="pattern.factory.lib.ProductCreator" project="DesignPattern" 
+    file="/DesignPattern/src/pattern/factory/lib/ProductCreator.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="572" y="155"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="7" language="java" name="pattern.factory.impl.MpPotion" project="DesignPattern" 
+    file="/DesignPattern/src/pattern/factory/impl/MpPotion.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="288" y="315"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <generalization id="8">    
+    <end type="SOURCE" refId="4"/>    
+    <end type="TARGET" refId="6"/>  
   </generalization>  
-  <realization id="10">    
+  <realization id="9">    
     <end type="SOURCE" refId="1"/>    
-    <end type="TARGET" refId="7"/>  
+    <end type="TARGET" refId="5"/>  
+  </realization>  
+  <realization id="10">    
+    <end type="SOURCE" refId="7"/>    
+    <end type="TARGET" refId="5"/>  
   </realization>  
   <generalization id="11">    
-    <end type="SOURCE" refId="4"/>    
-    <end type="TARGET" refId="5"/>  
+    <end type="SOURCE" refId="3"/>    
+    <end type="TARGET" refId="6"/>  
   </generalization>  
   <classifier-display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
     sort-features="false" accessors="true" visibility="true">    

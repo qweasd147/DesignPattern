@@ -1,18 +1,24 @@
 package pattern.factory;
 
 import pattern.factory.impl.HpCreator;
-import pattern.factory.lib.Item;
-import pattern.factory.lib.ItemCreator;
+import pattern.factory.impl.MpCreator;
+import pattern.factory.lib.Product;
+import pattern.factory.lib.ProductCreator;
 
 public class Main {
 
 	public static void main(String[] args) {
-		ItemCreator creator;
-		Item item;
+		ProductCreator creator;
+		Product product;
 		
 		creator = new HpCreator();
-		item = creator.create();
-		item.use();
+		product = creator.create();
+		product.use();
+		
+		creator = new MpCreator();
+		product = creator.create();
+		product.use();
+		
 		
 	}
 

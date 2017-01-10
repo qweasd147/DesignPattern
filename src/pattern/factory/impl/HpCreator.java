@@ -2,11 +2,11 @@ package pattern.factory.impl;
 
 import java.util.Date;
 
-import pattern.factory.lib.Item;
-import pattern.factory.lib.ItemCreator;
+import pattern.factory.lib.Product;
+import pattern.factory.lib.ProductCreator;
 
-public class HpCreator extends ItemCreator{
-
+public class HpCreator extends ProductCreator{
+	
 	@Override
 	protected void requestItemsInfo() {
 		System.out.println("체력 회복 물약 정보를 가져옴");
@@ -18,7 +18,7 @@ public class HpCreator extends ItemCreator{
 	}
 
 	@Override
-	protected Item createItem() {
+	protected Product createItem() {
 		return new HpPotion();
 	}
 

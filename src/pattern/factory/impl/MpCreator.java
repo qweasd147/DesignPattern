@@ -2,10 +2,10 @@ package pattern.factory.impl;
 
 import java.util.Date;
 
-import pattern.factory.lib.Item;
-import pattern.factory.lib.ItemCreator;
+import pattern.factory.lib.Product;
+import pattern.factory.lib.ProductCreator;
 
-public class MpCreator extends ItemCreator{
+public class MpCreator extends ProductCreator{
 
 	@Override
 	protected void requestItemsInfo() {
@@ -18,7 +18,7 @@ public class MpCreator extends ItemCreator{
 	}
 
 	@Override
-	protected Item createItem() {
+	protected Product createItem() {
 		return new MpPotion();
 	}
 

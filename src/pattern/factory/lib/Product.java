@@ -1,5 +1,5 @@
 package pattern.factory.lib;
 
-public interface Item {
+public interface Product {
 	public void use();
 }
