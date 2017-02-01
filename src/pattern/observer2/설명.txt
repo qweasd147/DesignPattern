@@ -1,0 +1,1 @@
+java.util.Observable <- 옵저버 클래스 써서 구현
