@@ -11,8 +11,13 @@ public class Button {
 	
 	public void onClick(){
 		//이벤트 처리
-		if(onClickListener != null)
-		onClickListener.onClick(this);
+		if(onClickListener != null){
+			
+			onClickListener.onClick(this);
+			
+			onClickListener = null;
+		}
+		
 	}
 	
 	
