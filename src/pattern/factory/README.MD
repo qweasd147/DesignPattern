@@ -26,11 +26,61 @@
 
 * 서브 클래스에서 어떤 클래스의 인스턴스를 만들지를 결정한다.
 * 제품을 생산하는 부분과 사용하는 부분을 분리하여 위 소스에서 `Creator`와 `ConcreteCreator`는 느슨한 결합이 된다.
+* 객체 생성하는 코드를 캡슐화 한다(`create` method).
 
 # 3. Code
 
+구체화된 클래스가 아닌 추상화 된 인터페이스에 의존하는 점의 장점으로 아래 메소드를 보면
 ```java
+protected Pizza orderPizza(String type){
 
+    Pizza pizza = createPizza(type);
+
+    pizza.prepare();
+    pizza.bake();
+    pizza.cut();
+    pizza.box();
+
+    return pizza;
+}
+```
+위 소스는 `createPizza`라는 추상 method를 통해 `Pizza` interface를 구현체를 주입 받게 된다.
+
+만약 `createPizza`를 사용하지 않고 직접 서술하게 되면 아래와 같은 소스가 될것이다.
+
+```java
+protected Pizza orderPizza(String type){
+
+    Pizza pizza = createPizza(type);
+    
+    if ("cheese".equals(type)){
+        pizza =  new ChicagoStyleCheesePizza();
+    }else if("veggie".equals(type)){
+        pizza = new ChicagoStyleVeggiePizza();
+    }
+    //......
+    
+    pizza.prepare();
+    pizza.bake();
+    pizza.cut();
+    pizza.box();
+
+    return pizza;
+}
 ```
 
+위 소스에선 2가지 밖에 없지만 만약 종류가 늘어나게 되면 계속해서 소스는 지저분하게 될것이다.
+
+또한 `orderPizza` method가 있는 Store 구현체 클래스는 하위 `Pizza` product class 들의 의존관계도 심해져
+
+유연함이 확실히 떨어지게 된다(계속해서 모든 Store 구현체 클래스를 수정하게 될것이다).
+
+따라서 `createPizza`라는 추상 method에 의존하면 각 Store 구현체를 수정할 일은 줄어들고, 간결해 진다.
+
 # 4. Code Class diagram
+
+## 4.1 일반 클래스 다이어그램
+![ClassDiagram](./pizza/ClassDiagram.png)
+
+## 4.1 dependencies 관계 추가한 클래스 다이어그램
+![ClassDiagram](./pizza/ClassDiagramWithDependencies.png)
