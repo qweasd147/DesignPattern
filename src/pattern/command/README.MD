@@ -6,6 +6,9 @@
     매개변수화 할수 있다. 요청을 큐에 저장하거나 로그로 기록할 수 있고,
     작업 취소기능을 하원할 수도 있다.
 
+![ClassDiagram](./base/ClassDiagram.png)
+
+
 # 2. 특징
 
 * 커맨드 패턴을 이용하면 요청을 하는 객체와 그 요청을 수행하는 객체를 분리 시킬 수 있다.
@@ -31,3 +34,5 @@
     지우도록 할수도 있고, 저장해 둔 명령을 여러번 수행 할 수도 있음.
 
 # 5. Code Class diagram
+
+![ClassDiagram](./ClassDiagram.png)

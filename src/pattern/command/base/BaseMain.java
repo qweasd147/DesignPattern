@@ -7,7 +7,7 @@ public class BaseMain {
         Invoker invoker = new Invoker();
 
         Receiver receiver = new Receiver();
-        ConcreteCommand concreteCommand = new ConcreteCommand(receiver);
+        Command concreteCommand = new ConcreteCommand(receiver);
 
         invoker.setCommand(concreteCommand);
         invoker.invoke();
