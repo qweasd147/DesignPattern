@@ -2,6 +2,7 @@ package pattern.iterator;
 
 import java.util.Arrays;
 import java.util.Iterator;
+import java.util.stream.IntStream;
 
 public class ArrayConcreteIterator<T> implements Iterator<T>{
 
@@ -27,8 +28,10 @@ public class ArrayConcreteIterator<T> implements Iterator<T>{
     public void remove() {
         if(hasNext()){
             System.out.println("삭제 : "+items[position]);
-            items = (T[]) Arrays.stream(items)
-                    .filter((item) -> item != items[position])
+
+            items = (T[]) IntStream.range(0, items.length)
+                    .filter( arrIdx -> arrIdx != position )
+                    .mapToObj( arrIdx -> items[arrIdx])
                     .toArray();
 
             System.out.println("array items : "+Arrays.toString(items));
