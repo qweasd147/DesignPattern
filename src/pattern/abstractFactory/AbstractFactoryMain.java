@@ -9,13 +9,13 @@ public class AbstractFactoryMain {
 
         AbstractFactory factory1 = new ConcreteFactory1();
 
-        AbstractProductA productA1 = factory1.createProductA();
-        AbstractProductB productB1 = factory1.createProductB();
+        AbstractProductA productAFromFactory1 = factory1.createProductA();
+        AbstractProductB productBFromFactory1 = factory1.createProductB();
 
         AbstractFactory factory2 = new ConcreteFactory2();
         
-        AbstractProductA productA2 = factory2.createProductA();
-        AbstractProductB productB2 = factory2.createProductB();
+        AbstractProductA productAFromFactory2 = factory2.createProductA();
+        AbstractProductB productBFromFactory2 = factory2.createProductB();
 
     }
 }

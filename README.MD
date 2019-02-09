@@ -10,8 +10,8 @@
 7. [어뎁터 패턴 : 객체를 감싸서 다른 인터페이스에 제공(말그대로 adapter 역할)](https://github.com/qweasd147/DesignPattern/blob/master/src/pattern/adapter/README.MD)
 8. [옵저버 패턴 : 상태가 변경되면 다른 객체들한테 연락을 돌림(변화를 감지)](https://github.com/qweasd147/DesignPattern/blob/master/src/pattern/observer/README.MD)
 9. [템플릿 메소드 패턴 : 알고리즘의 개별 단계를 구현하는 방법을 서브클래스에서 결정(구현)](https://github.com/qweasd147/DesignPattern/blob/master/src/pattern/template/README.MD)
-10. [추상 팩토리 패턴 : 클라이언트에서 구상 클래스를 지정하지 않으면서도 일군의 객체를 생성하고 싶을때](https://github.com/qweasd147/DesignPattern/blob/master/src/pattern/abstractFactory/README.MD)
-11. [커맨드 패턴 : 요청을 객체로 감싼다.](https://github.com/qweasd147/DesignPattern/blob/master/src/pattern/command/README.MD)
+10. [추상 팩토리 패턴 : 클라이언트에서 구상 클래스를 지정하지 않고 연관된 객체를 생성하고 싶을때](https://github.com/qweasd147/DesignPattern/blob/master/src/pattern/abstractFactory/README.MD)
+11. [커맨드 패턴 : 요청을 객체로 감싼다.(메소드 호출을 캡슐화)](https://github.com/qweasd147/DesignPattern/blob/master/src/pattern/command/README.MD)
 12. [브릿지 패턴 : 구현 뿐만 아니라 추상화 부분까지 바뀔 가능성이 높을 시](https://github.com/qweasd147/DesignPattern/blob/master/src/pattern/bridge/README.MD)
 
 

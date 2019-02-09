@@ -32,40 +32,48 @@
 
 구체화된 클래스가 아닌 추상화 된 인터페이스에 의존하는 점의 장점으로 아래 메소드를 보면
 ```java
-protected Pizza orderPizza(String type){
+public abstract class PizzaStore {
 
-    Pizza pizza = createPizza(type);
+    protected Pizza orderPizza(String type){
 
-    pizza.prepare();
-    pizza.bake();
-    pizza.cut();
-    pizza.box();
+        Pizza pizza = createPizza(type);
 
-    return pizza;
+        pizza.prepare();
+        pizza.bake();
+        pizza.cut();
+        pizza.box();
+
+        return pizza;
+    }
+
+    protected abstract Pizza createPizza(String type);
 }
+
 ```
 위 소스는 `createPizza`라는 추상 method를 통해 `Pizza` interface를 구현체를 주입 받게 된다.
 
 만약 `createPizza`를 사용하지 않고 직접 서술하게 되면 아래와 같은 소스가 될것이다.
 
 ```java
-protected Pizza orderPizza(String type){
-
-    Pizza pizza = createPizza(type);
+public class PizzaStore {
+    protected Pizza orderPizza(String type){
     
-    if ("cheese".equals(type)){
-        pizza =  new ChicagoStyleCheesePizza();
-    }else if("veggie".equals(type)){
-        pizza = new ChicagoStyleVeggiePizza();
+        Pizza pizza = createPizza(type);
+        
+        if ("cheese".equals(type)){
+            pizza =  new ChicagoStyleCheesePizza();
+        }else if("veggie".equals(type)){
+            pizza = new ChicagoStyleVeggiePizza();
+        }
+        //......
+        
+        pizza.prepare();
+        pizza.bake();
+        pizza.cut();
+        pizza.box();
+    
+        return pizza;
     }
-    //......
-    
-    pizza.prepare();
-    pizza.bake();
-    pizza.cut();
-    pizza.box();
-
-    return pizza;
 }
 ```
 
@@ -76,6 +84,11 @@ protected Pizza orderPizza(String type){
 유연함이 확실히 떨어지게 된다(계속해서 모든 Store 구현체 클래스를 수정하게 될것이다).
 
 따라서 `createPizza`라는 추상 method에 의존하면 각 Store 구현체를 수정할 일은 줄어들고, 간결해 진다.
+
+
+다시 소스를 보며 다시한번 설명하면 `PizzaStore`는 `PizzaStore`를 구현한 서브 클래스(`ChiacgoPizzaStore`, `NYPizzaStore`)들의 사전 지식이 전혀 없이 만들어진다. 왜냐면 `createPizza` 메소드를 서브 클래스로 위임해, 서브 클래스에서 만들어 지기 때문이다. 또한 패턴 내부적으로 템플릿 패턴이 포함되어 있다.
+
+또한 상위 객체에서 객체 생성을 추상화 된 메소드인 **protected abstract Pizza createPizza(String type)** 에 의존(하위에 위임) 했다고도 볼 수 있다.(DI)
 
 # 4. Code Class diagram
 
