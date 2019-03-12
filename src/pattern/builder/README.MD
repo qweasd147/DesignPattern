@@ -43,3 +43,9 @@
 
 단점을 보완해줄 수 있다.  단점으로는 `builder`를 만들 떄 클라이언트에 대해 많이 알아야한다. 
 
+# 4. Lombok
+Lombok을 통해서 annotation으로 builder 패턴을 구현 할 수가 있다.
+
+![ClassDiagram](./builderSample1.PNG)
+
+![ClassDiagram](./builderSample2.PNG)

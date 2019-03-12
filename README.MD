@@ -13,7 +13,7 @@
 10. [추상 팩토리 패턴 : 클라이언트에서 구상 클래스를 지정하지 않고 연관된 객체를 생성하고 싶을때](https://github.com/qweasd147/DesignPattern/blob/master/src/pattern/abstractFactory/README.MD)
 11. [커맨드 패턴 : 요청을 객체로 감싼다.(메소드 호출을 캡슐화)](https://github.com/qweasd147/DesignPattern/blob/master/src/pattern/command/README.MD)
 12. [브릿지 패턴 : 구현 뿐만 아니라 추상화 부분까지 바뀔 가능성이 높을 시](https://github.com/qweasd147/DesignPattern/blob/master/src/pattern/bridge/README.MD)
-
+12. [빌더 패턴 : 생성자 인자값이 많을때, 필수 or 선택 인자값을 나누어 생성하고 싶을때](https://github.com/qweasd147/DesignPattern/blob/master/src/pattern/builder/README.MD)
 
 # 소스 참고한거
 
